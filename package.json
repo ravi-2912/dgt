@@ -1,0 +1,15 @@
+{
+    "name": "dgt",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+        "common/*",
+        "services/*"
+    ],
+    "devDependencies": {
+        "concurrently": "^6.0.1",
+        "kill-port": "^1.6.1",
+        "lerna": "^4.0.0",
+        "meta": "^2.2.15"
+    }
+}
