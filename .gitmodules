@@ -1,0 +1,7 @@
+[submodule "common/ui"]
+	path = common/ui
+	url = https://github.com/ravi-2912/dgt-ui.git
+
+[submodule "services/client"]
+	path = services/client
+	url = https://github.com/ravi-2912/dgt-client.git

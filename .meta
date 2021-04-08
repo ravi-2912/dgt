@@ -1,3 +1,6 @@
 {
-    "projects": {}
+  "projects": {
+    "common\\ui": "https://github.com/ravi-2912/dgt-ui.git",
+    "services\\client": "https://github.com/ravi-2912/dgt-client.git"
+  }
 }

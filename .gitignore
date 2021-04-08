@@ -119,4 +119,8 @@ dist
 common/**
 !common/.gitkeep
 services/*
-!srevices/.gitkeep
+!services/.gitkeep
+
+# meta added
+/common\ui/
+/services\client/
