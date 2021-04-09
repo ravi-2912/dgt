@@ -25,12 +25,47 @@
         "lerna-exec": "yarn lerna exec -- ",
         "kill-ports": "yarn kill-port --port 3000,6006",
         "start": "yarn kill-ports && yarn lerna-run start",
-        "start-concurrently": "yarn kill-ports && yarn concurrently -n \"client,storybook\" \"yarn workspace client start\" \"yarn workspace ngd-pattern-library start\""
+        "start-concurrently": "yarn kill-ports && yarn concurrently -n \"client,storybook\" \"yarn workspace client start\" \"yarn workspace ngd-pattern-library start\"",
+        "lint": "yarn eslint .",
+        "lint:fix": "yarn eslint . --fix"
+    },
+    "eslintConfig": {
+        "extends": [
+            "wesbos"
+        ],
+        "rules": {
+            "no-console": 0,
+            "react/prop-types": 0,
+            "react/jsx-props-no-spreading": 0,
+            "prettier/prettier": [
+                "error",
+                {
+                    "tabWidth": 4,
+                    "semi": false,
+                    "printWidth": 120,
+                    "endOfLine": "auto",
+                    "singleQuote": true,
+                    "trailingComma": "es5"
+                }
+            ]
+        }
     },
     "devDependencies": {
+        "babel-eslint": "10.1.0",
         "concurrently": "^6.0.1",
+        "eslint": "7.8.1",
+        "eslint-config-airbnb": "18.2.0",
+        "eslint-config-prettier": "6.11.0",
+        "eslint-config-wesbos": "1.0.1",
+        "eslint-plugin-html": "6.1.0",
+        "eslint-plugin-import": "2.22.0",
+        "eslint-plugin-jsx-a11y": "6.3.1",
+        "eslint-plugin-prettier": "3.1.4",
+        "eslint-plugin-react": "7.20.6",
+        "eslint-plugin-react-hooks": "4.1.2",
         "kill-port": "^1.6.1",
         "lerna": "^4.0.0",
-        "meta": "^2.2.15"
+        "meta": "^2.2.15",
+        "prettier": "2.1.1"
     }
 }
