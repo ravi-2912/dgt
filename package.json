@@ -31,6 +31,27 @@
         "lint:fix": "yarn eslint . --fix",
         "prettify": "yarn prettier --write ."
     },
+    "prettier": {
+        "tabWidth": 4,
+        "semi": false,
+        "printWidth": 120,
+        "endOfLine": "auto",
+        "singleQuote": true,
+        "trailingComma": "es5",
+        "overrides": [
+            {
+                "files": [
+                    "*.css",
+                    "*.scss"
+                ],
+                "options": {
+                    "semi": true,
+                    "singleQuote": false,
+                    "printWidth": 80
+                }
+            }
+        ]
+    },
     "eslintConfig": {
         "ignorePatterns": [
             "!.*",
