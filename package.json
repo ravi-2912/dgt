@@ -7,6 +7,7 @@
         "services/*"
     ],
     "scripts": {
+        "meta-add": "yarn meta git add",
         "meta-pull": "yarn meta git pull",
         "meta-push": "yarn meta git push",
         "meta-commit": "yarn meta git commit",
@@ -27,9 +28,17 @@
         "start": "yarn kill-ports && yarn lerna-run start",
         "start-concurrently": "yarn kill-ports && yarn concurrently -n \"client,storybook\" \"yarn workspace client start\" \"yarn workspace ngd-pattern-library start\"",
         "lint": "yarn eslint .",
-        "lint:fix": "yarn eslint . --fix"
+        "lint:fix": "yarn eslint . --fix",
+        "prettify": "yarn prettier --write ."
     },
     "eslintConfig": {
+        "ignorePatterns": [
+            "!.*",
+            ".git",
+            "dist",
+            "build",
+            "node_modules"
+        ],
         "extends": [
             "wesbos"
         ],
