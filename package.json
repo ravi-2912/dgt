@@ -31,6 +31,9 @@
         "lint:fix": "yarn eslint . --fix",
         "prettify": "yarn prettier --write ."
     },
+    "commitizen": {
+        "path": "./node_modules/cz-conventional-changelog"
+    },
     "prettier": {
         "tabWidth": 4,
         "semi": false,
@@ -81,8 +84,13 @@
         }
     },
     "devDependencies": {
+        "@commitlint/cli": "^12.1.1",
+        "@commitlint/config-conventional": "^12.1.1",
         "babel-eslint": "10.1.0",
+        "commitizen": "^4.2.3",
         "concurrently": "^6.0.1",
+        "conventional-changelog-cli": "^2.1.1",
+        "cz-conventional-changelog": "^3.3.0",
         "eslint": "7.8.1",
         "eslint-config-airbnb": "18.2.0",
         "eslint-config-prettier": "6.11.0",
@@ -93,6 +101,7 @@
         "eslint-plugin-prettier": "3.1.4",
         "eslint-plugin-react": "7.20.6",
         "eslint-plugin-react-hooks": "4.1.2",
+        "husky": "^6.0.0",
         "kill-port": "^1.6.1",
         "lerna": "^4.0.0",
         "meta": "^2.2.15",
