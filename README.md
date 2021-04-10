@@ -2,6 +2,6 @@
 
 meta repo with tool
 
+* Yarn Workspaces
 * Lerna
 * meta
-* more to come
