@@ -9,19 +9,11 @@
         ],
         "nohoist": [
             "**/husky",
-            "**/husky/**",
-            "**/prettier",
-            "**/prettier/**",
             "**/commitizen",
-            "**/commitizen/**",
             "**/@commitlint/cli",
-            "**/@commitlint/cli/**",
             "**/cz-conventional-changelog",
-            "**/cz-conventional-changelog/**",
             "**/conventional-changelog-cli",
-            "**/conventional-changelog-cli/**",
-            "**/@commitlint/config-conventional",
-            "**/@commitlint/config-conventional/**"
+            "**/@commitlint/config-conventional"
         ]
     },
     "scripts": {
@@ -47,7 +39,9 @@
         "start-concurrently": "yarn kill-ports && yarn concurrently -n \"client,storybook\" \"yarn workspace client start\" \"yarn workspace ngd-pattern-library start\"",
         "lint": "yarn eslint .",
         "lint:fix": "yarn eslint . --fix",
-        "prettify": "yarn prettier --write ."
+        "prettify": "yarn prettier --write .",
+        "node-clean": "rm ./yarn.lock && rm -rf ./node_modules",
+        "clean": "yarn lerna-clean && yarn node-clean"
     },
     "config": {
         "commitizen": {
