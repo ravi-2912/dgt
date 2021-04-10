@@ -31,8 +31,29 @@
         "lint:fix": "yarn eslint . --fix",
         "prettify": "yarn prettier --write ."
     },
-    "commitizen": {
-        "path": "./node_modules/cz-conventional-changelog"
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional",
+            "@commitlint/config-lerna-scopes"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+        }
+    },
+    "lint-staged": {
+        "*.{css,less,scss,html,json,jsx,js}": [
+            "yarn prettify"
+        ],
+        "*.{js, jsx}": "yarn lint:fix"
     },
     "prettier": {
         "tabWidth": 4,
@@ -45,7 +66,8 @@
             {
                 "files": [
                     "*.css",
-                    "*.scss"
+                    "*.scss",
+                    "*.less"
                 ],
                 "options": {
                     "semi": true,
