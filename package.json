@@ -10,6 +10,8 @@
         "nohoist": [
             "**/husky",
             "**/husky/**",
+            "**/prettier",
+            "**/prettier/**",
             "**/commitizen",
             "**/commitizen/**",
             "**/@commitlint/cli",
