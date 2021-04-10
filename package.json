@@ -38,9 +38,15 @@
     },
     "commitlint": {
         "extends": [
-            "@commitlint/config-conventional",
-            "@commitlint/config-lerna-scopes"
-        ]
+            "@commitlint/config-conventional"
+        ],
+        "rules": {
+            "scope-enum": [
+                2,
+                "always",
+                []
+            ]
+        }
     },
     "husky": {
         "hooks": {
