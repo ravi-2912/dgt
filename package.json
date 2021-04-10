@@ -2,10 +2,26 @@
     "name": "dgt",
     "version": "1.0.0",
     "private": true,
-    "workspaces": [
-        "common/*",
-        "services/*"
-    ],
+    "workspaces": {
+        "packages": [
+            "common/*",
+            "services/*"
+        ],
+        "nohoist": [
+            "**/husky",
+            "**/husky/**",
+            "**/commitizen",
+            "**/commitizen/**",
+            "**/@commitlint/cli",
+            "**/@commitlint/cli/**",
+            "**/cz-conventional-changelog",
+            "**/cz-conventional-changelog/**",
+            "**/conventional-changelog-cli",
+            "**/conventional-changelog-cli/**",
+            "**/@commitlint/config-conventional",
+            "**/@commitlint/config-conventional/**"
+        ]
+    },
     "scripts": {
         "meta-add": "yarn meta git add",
         "meta-pull": "yarn meta git pull",
@@ -126,7 +142,6 @@
         "concurrently": "^6.0.1",
         "conventional-changelog-cli": "^2.1.1",
         "cz-conventional-changelog": "^3.3.0",
-        "cz-lerna-changelog": "^2.0.3",
         "eslint": "7.8.1",
         "eslint-config-airbnb": "18.2.0",
         "eslint-config-prettier": "6.11.0",
@@ -139,7 +154,7 @@
         "eslint-plugin-react-hooks": "4.1.2",
         "husky": "4.3.8",
         "kill-port": "^1.6.1",
-        "lerna": "3.22.1",
+        "lerna": "^4.0.0",
         "lint-staged": "^10.5.4",
         "meta": "^2.2.15",
         "prettier": "2.1.1"
