@@ -37,6 +37,9 @@
         }
     },
     "commitlint": {
+        "plugins": [
+            "workspace-scopes"
+        ],
         "extends": [
             "@commitlint/config-conventional"
         ],
@@ -44,7 +47,9 @@
             "scope-enum": [
                 2,
                 "always",
-                []
+                [
+                    "dgt"
+                ]
             ]
         }
     },
@@ -117,6 +122,7 @@
         "@commitlint/config-lerna-scopes": "^12.1.1",
         "babel-eslint": "10.1.0",
         "commitizen": "^4.2.3",
+        "commitlint-plugin-workspace-scopes": "^1.1.0",
         "concurrently": "^6.0.1",
         "conventional-changelog-cli": "^2.1.1",
         "cz-conventional-changelog": "^3.3.0",
